@@ -4,13 +4,15 @@ def countApplesAndOranges(s, t, a, b, apples, oranges):
 
     # Count apples
     for d in apples:
-        if s <= a + d <= t:
-            apple_count += 1
+        if d > 0:
+            if s <= a + d :
+                apple_count += 1
 
     # Count oranges
     for d in oranges:
-        if s <= b + d <= t:
-            orange_count += 1
+        if d < 0:
+             if s <= b + d:
+                orange_count += 1
 
     print(apple_count)
     print(orange_count)
